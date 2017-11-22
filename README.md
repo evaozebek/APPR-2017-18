@@ -2,10 +2,12 @@
 
 Repozitorij z gradivi pri predmetu APPR v študijskem letu 2017/18
 
-## Tematika
+## Poroke in razveze v Sloveniji
 
-Izbrali si boste temo, s katero se bo vaš projekt ukvarjal. Tukaj boste
-napisali, kje ste dobili podatke, ter kakšen je vaš cilj.
+Analizirala bom poroke in razveze v Sloveniji skozi čas in glede na starost ženina ter neveste. Zanimal me bo tudi zakonski stan ženina in neveste pred poroko torej ali je le-ta vdova/vdovec, samski/a ali pa razvezan/a. Analizirala bom poroke in razveze v različnih slovenskih občinah, zanimala pa me bo tudi korelacija le-teh z versko sestavo prebivalstva Slovenije. Vključila bom tudi podatke o registriranih partnerskih skupnosti med moškima in med ženskama. 
+
+Podatke bom pridobila na podatkovnem portalu Statističnega urada Republike Slovenije (http://pxweb.stat.si/pxweb/Dialog/statfile2.asp; demografsko in socialno področje) 
+Podatki so na voljo v obliki tabel kot PC-Axis, Excel, txt., .csv, .htm, .xml ipd.
 
 ## Program
 
