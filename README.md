@@ -14,7 +14,7 @@ Podatki so na voljo v obliki tabel kot PC-Axis, Excel, txt., .csv, .htm, .xml ip
 - spol, starost, leto, sklenitve zakonskih zvez
 
 2. tabela: sklenitve zakonskih zvez po zakonskem stanu ženina in neveste
--spol, leto, starostne skupine, zakonski stan ženina, zakonski stan neveste
+- spol, leto, starostne skupine, zakonski stan ženina, zakonski stan neveste
 
 3. tabela: Starostnospecifične stopnje prve poročnosti žensk
 - stolpci: starost, leto
