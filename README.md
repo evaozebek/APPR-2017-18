@@ -10,7 +10,7 @@ Podatke bom pridobila na podatkovnem portalu Statističnega urada Republike Slov
 Podatki so na voljo v obliki tabel kot PC-Axis, Excel, txt., .csv, .htm, .xml ipd.
 
 
-### 1. tabela: sklenitve zakonskih zvez po starostnih skupinah ženina in neveste
+##### 1. tabela: sklenitve zakonskih zvez po starostnih skupinah ženina in neveste
 - spol, starost, leto, sklenitve zakonskih zvez
 
 ### 2. tabela: sklenitve zakonskih zvez po zakonskem stanu ženina in neveste
