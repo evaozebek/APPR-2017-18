@@ -4,7 +4,7 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2017/18
 
 ## Poroke in razveze v Sloveniji
 
-Analizirala bom poroke in razveze v Sloveniji skozi čas in glede na starost ženina ter neveste. Zanimal me bo tudi zakonski stan ženina in neveste pred poroko torej ali je le-ta vdova/vdovec, samski/a ali pa razvezan/a. Analizirala bom poroke in razveze v različnih slovenskih občinah. Vključila bom tudi podatke o registriranih partnerskih skupnosti med moškima in med ženskama. 
+Analizirala bom poroke in razveze v Sloveniji skozi čas in glede na starost ženina ter neveste. Zanimal me bo tudi zakonski stan ženina in neveste pred poroko torej ali je le-ta vdova/vdovec, samski/a ali pa razvezan/a. Analizirala bom tudi poroke in razveze v slovenskih regijah. Vključila bom tudi podatke o registriranih partnerskih skupnosti med moškima in med ženskama. 
 
 Podatke bom pridobila na podatkovnem portalu Statističnega urada Republike Slovenije (http://pxweb.stat.si/pxweb/Dialog/statfile2.asp; demografsko in socialno področje) 
 Podatki so na voljo v obliki tabel kot PC-Axis, Excel, txt., .csv, .htm, .xml ipd.
@@ -16,17 +16,15 @@ Podatki so na voljo v obliki tabel kot PC-Axis, Excel, txt., .csv, .htm, .xml ip
 ##### 2. tabela: sklenitve zakonskih zvez po zakonskem stanu ženina in neveste
 - spol, leto, starostne skupine, zakonski stan ženina, zakonski stan neveste
 
-##### 3. tabela: Starostnospecifične stopnje prve poročnosti žensk
-- stolpci: starost, leto
-
-##### 4. tabela: Razveze zakonskih zvez po starostnih skupinah moža in žene
+##### 3. tabela: Razveze zakonskih zvez po starostnih skupinah moža in žene
 - razveze, mož/žena, starostne skupine, leto
 
-##### 5. tabela: razveze zakonskih zvez po starostnih skupinah moža in žene ter trajanju zakonske zveze
+##### 4. tabela: razveze zakonskih zvez po starostnih skupinah moža in žene ter trajanju zakonske zveze
 - leto, spol, starostne skupine, trajanje zakonske zveze
 
-##### 6. tabela: razveze zakonskih zvez glede na to, komu so bili otroci dodeljeni
+##### 5. tabela: razveze zakonskih zvez glede na to, komu so bili otroci dodeljeni
 - leto, otroci so bili dodeljeni
+
 
 
 ## Program
