@@ -13,19 +13,19 @@ Podatki so na voljo v obliki tabel kot PC-Axis, Excel, txt., .csv, .htm, .xml ip
 ##### 1. tabela: sklenitve zakonskih zvez po starostnih skupinah ženina in neveste
 - spol, starost, leto, sklenitve zakonskih zvez
 
-### 2. tabela: sklenitve zakonskih zvez po zakonskem stanu ženina in neveste
+##### 2. tabela: sklenitve zakonskih zvez po zakonskem stanu ženina in neveste
 - spol, leto, starostne skupine, zakonski stan ženina, zakonski stan neveste
 
-### 3. tabela: Starostnospecifične stopnje prve poročnosti žensk
+##### 3. tabela: Starostnospecifične stopnje prve poročnosti žensk
 - stolpci: starost, leto
 
-### 4. tabela: Razveze zakonskih zvez po starostnih skupinah moža in žene
+##### 4. tabela: Razveze zakonskih zvez po starostnih skupinah moža in žene
 - razveze, mož/žena, starostne skupine, leto
 
-### 5. tabela: razveze zakonskih zvez po starostnih skupinah moža in žene ter trajanju zakonske zveze
+##### 5. tabela: razveze zakonskih zvez po starostnih skupinah moža in žene ter trajanju zakonske zveze
 - leto, spol, starostne skupine, trajanje zakonske zveze
 
-### 6. tabela: razveze zakonskih zvez glede na to, komu so bili otroci dodeljeni
+##### 6. tabela: razveze zakonskih zvez glede na to, komu so bili otroci dodeljeni
 - leto, otroci so bili dodeljeni
 
 
