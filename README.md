@@ -25,6 +25,9 @@ Podatki so na voljo v obliki tabel kot PC-Axis, Excel, txt., .csv, .htm, .xml ip
 ##### 5. tabela: razveze zakonskih zvez glede na to, komu so bili otroci dodeljeni
 - leto, otroci so bili dodeljeni
 
+##### 6.tabela: primerjava števila porok in razvez
+- leto, sklenitve zakonskih zvez, razveze
+
 
 
 ## Program
