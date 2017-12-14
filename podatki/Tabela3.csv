@@ -1,0 +1,67 @@
+"Osnovni podatki in kazalniki o razvezah zakonskih zvez po: LETO ,"
+"MERITVE"
+
+" ";"Razveze - SKUPAJ";"Trajanje zakonske zveze pod 1 leto";"Trajanje zakonske zveze 1-4 leta";"Trajanje zakonske zveze 5-9 let";"Trajanje zakonske zveze 10-14 let";"Trajanje zakonske zveze 15 let ali vec";"Razveze zakonskih zvez z otroki";"Razveze zakonskih zvez brez otrok"
+"1955";1155;14;389;752;0;0;721;434
+"1960";1540;64;427;450;325;274;992;548
+"1965";1841;65;547;494;299;436;1300;541
+"1970";1913;51;589;530;311;432;1273;640
+"1975";2205;77;733;567;358;470;1506;699
+"1980";2309;41;705;658;363;542;1574;735
+"1985";2547;46;638;771;467;625;1873;674
+"1990";1858;28;365;479;394;592;1332;526
+"1991";1828;34;370;429;403;592;1308;520
+"1992";1966;34;379;507;360;686;1387;579
+"1993";1962;33;380;445;389;715;1360;602
+"1994";1923;14;335;451;358;765;1354;569
+"1995";1585;12;225;332;323;693;1055;530
+"1996";2004;10;314;449;374;857;1362;642
+"1997";1996;10;297;418;378;893;1325;671
+"1998";2074;17;313;450;389;905;1359;715
+"1999";2074;18;286;421;386;963;1345;729
+"2000";2125;31;268;426;384;1016;1340;785
+"2001";2274;17;292;418;424;1123;1418;856
+"2002";2457;29;343;487;404;1194;1482;975
+"2003";2461;19;329;439;434;1240;1476;985
+"2004";2411;31;330;437;402;1211;1364;1047
+"2005";2647;29;345;506;416;1351;1500;1147
+"2006";2334;23;313;433;349;1216;1301;1033
+"2007";2617;30;380;487;417;1303;1348;1269
+"2008";2246;25;326;419;352;1124;1259;987
+"2009";2297;17;342;455;385;1098;1308;989
+"2010";2430;29;374;445;380;1202;1273;1157
+"2011";2298;24;377;432;321;1144;1186;1112
+"2012";2509;25;403;452;388;1241;1267;1242
+"2013";2351;28;374;451;369;1129;1511;840
+"2014";2469;17;396;491;349;1216;1238;1231
+"2015";2432;32;459;486;318;1137;1205;1227
+"2016";2531;33;424;507;383;1184;1269;1262
+
+"Vir: Statisti?ni urad Republike Slovenije. "
+" "
+" "
+"V podatku 5-9 so za leti 1954 in 1955 v?tete razveze zakonskih zvez, "
+"ki so trajale 5 let ali ve?. "
+
+"Povezane vsebine: "
+"- (seznam "
+"HREF=http://www.stat.si/StatWeb/Common/PrikaziDokument.ashx?IdDatotek-"
+"e=9490 target=_blank) Metodolo?ka pojasnila"
+
+"Razvezana zakonska zveza je zakonska zveza, ki je prenehala "
+"obstajati, ker je bila razvezana s pravnomo?no sodbo sodi??a. "
+" "
+"Celotna stopnja razveznosti je povpre?no ?tevilo razvez na eno "
+"sklenjeno zakonsko zvezo. "
+" "
+"Razveze zakonskih zvez na 1000 prebivalcev je razmerje med ?tevilom "
+"razvez zakonskih zvez v koledarskem letu in ?tevilom prebivalstva "
+"sredi istega leta, pomno?eno s 1000. "
+" "
+"Razveze zakonskih zvez na 1000 sklenitev zakonskih zvez je razmerje "
+"med ?tevilom razvez zakonskih zvez v koledarskem letu in ?tevilom "
+"sklenitev zakonskih zvez v istem letu, pomno?eno s 1000. "
+" "
+"Trajanje zakonske zveze je ?as, ki je pretekel od datuma sklenitve "
+"zakonske zveze do datuma razveze te zakonske zveze."
+
