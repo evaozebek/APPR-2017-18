@@ -13,7 +13,6 @@ osnovni.podatki.poroke <- read_csv2(file = "podatki/Tabela1.csv", skip = 2, loca
   melt(value.name = "vrednost", variable.name = "spremenljivka", id.vars = 1)
 colnames(osnovni.podatki.poroke)[1] <- "leto"
 
-#POPRAVI: poimenovanje stolpcev
 
 #========================================================================================================
 #TABELA2
@@ -24,15 +23,12 @@ stolpci <- data.frame()
 #========================================================================================================
 #TABELA3 - število razvez po letih
 osnovni.podatki.razveze <- read_csv2(file = "podatki/Tabela3.csv", skip = 3, n_max = 34, locale = sl, trim_ws = TRUE) %>%
- melt()
-colnames(data) <- c("leto", "spremenljivka", "vrednost")
-  
-#  melt(value.name = "vrednost", variable.name = "spremenljivka", id.vars = 1)
-#colnames(osnovni.podatki.poroke)[1] <- "leto"
+
+  melt(value.name = "vrednost", variable.name = "spremenljivka", id.vars = 1)
+colnames(osnovni.podatki.razveze)[1] <- "leto"
 
 
 #POPRAVI: poimenovanje stolpcev
-
 
 #========================================================================================================
 #TABELA4
