@@ -10,7 +10,7 @@ sl <- locale(encoding = "Windows-1250")
 #========================================================================================================
 #TABELA1 - sklenitev zakonskih zvez po letih
 osnovni.podatki.poroke <- read_csv2(file = "podatki/Tabela1.csv", skip = 2, locale = sl, trim_ws = TRUE) %>%
-  melt(value.name = "vrednost", variable.name = "spremenljivka", id.vars = 1)
+  .[, 1:9] %>% melt(value.name = "vrednost", variable.name = "spremenljivka", id.vars = 1, na = "-")
 colnames(osnovni.podatki.poroke)[1] <- "leto"
 
 
