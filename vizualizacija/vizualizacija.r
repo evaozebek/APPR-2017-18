@@ -2,7 +2,8 @@
 
 library(ggplot2)
 library(dplyr)
-
+#========================================================================================================
+#GRAFI
 st.porok <- ggplot(osnovni.podatki.poroke %>% filter(spremenljivka == "Sklenitve zakonskih zvez - Skupaj"),
                    aes(x = leto, y = vrednost)) + geom_line() + 
   xlab("Leto") + ylab("Stevilo porok") +
@@ -15,18 +16,28 @@ st.razvez <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze
   xlab("Leto") + ylab("Stevilo razvez") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 
+prve.zveze <-ggplot(osnovni.podatki.poroke %>% filter(spremenljivka == "Prve sklenitve zakonskih zvez"), 
+                                 aes(x = leto, y = vrednost)) + geom_line() + 
+  xlab("Leto") + ylab("Prve sklenitve zakonskih zvez") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
+razveze.z.otroki <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze zakonskih zvez z otroki"), 
+                           aes(x = leto, y = vrednost)) + geom_line() + 
+  xlab("Leto") + ylab("Razveze zakonskih zvez z otroki") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
+razveze.brez.otrok <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze zakonskih zvez brez otrok"), 
+                           aes(x = leto, y = vrednost)) + geom_line() + 
+  xlab("Leto") + ylab("Razveze zakonskih zvez brez otrok") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 
 
+#še primerjava med zakonskim stanom ženina in neveste pred poroko(vdova,samski...)
+#========================================================================================================
+#ZEMLJEVID
+library(sp)
+library(maptools)
+library(digest)
+gpclibPermit()
 
 
-# Uvozimo zemljevid.
-#zemljevid <- uvozi.zemljevid("http://baza.fmf.uni-lj.si/OB.zip",
- #                            "OB/OB", encoding = "Windows-1250")
-#levels(zemljevid$OB_UIME) <- levels(zemljevid$OB_UIME) %>%
- # { gsub("Slovenskih", "Slov.", .) } %>% { gsub("-", " - ", .) }
-#zemljevid$OB_UIME <- factor(zemljevid$OB_UIME, levels = levels(obcine$obcina))
-#zemljevid <- pretvori.zemljevid(zemljevid)
-
-# Izračunamo povprečno velikost družine
-#povprecja <- druzine %>% group_by(obcina) %>%
-#  summarise(povprecje = sum(velikost.druzine * stevilo.druzin) / sum(stevilo.druzin))
