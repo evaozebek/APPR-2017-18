@@ -40,4 +40,18 @@ library(maptools)
 library(digest)
 gpclibPermit()
 
+zemljevid <- uvozi.zemljevid("http://biogeo.ucdavis.edu/data/gadm2.8/shp/SVN_adm_shp.zip",
+                             "SVN_adm1", encoding = "UTF-8") %>% pretvori.zemljevid()
+
+
+levels(zemljevid$NAME_1)[levels(zemljevid$NAME_1) %in%
+                           c("Spodnjeposavska")] <- c("Posavska")
+poroke <- poroke.regije[, names(poroke.regije), drop = F] 
+
+povprecje <- poroke %>% group_by(regija) %>% summarise(poroke = mean(stevilo))
+
+zemljevid.poroke <- ggplot() +
+  geom_polygon(data = povprecje %>% right_join(zemljevid, by = c("regija" = "NAME_1")),
+               aes(x = long, y = lat, group = group, fill = poroke), color = "black")+
+  xlab("") + ylab("") + ggtitle("Stevilo porok na slovenske regije")
 
