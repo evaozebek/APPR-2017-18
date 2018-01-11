@@ -46,7 +46,7 @@ zemljevid <- uvozi.zemljevid("http://biogeo.ucdavis.edu/data/gadm2.8/shp/SVN_adm
 
 levels(zemljevid$NAME_1)[levels(zemljevid$NAME_1) %in%
                            c("Notranjsko-kraška",
-                             "Spodnjeposavska", "Koroška", "Goriška", "Obalno-kraška ")] <- c("Primorsko-notranjska",
+                             "Spodnjeposavska", "Koroška", "Goriška", "Obalno-kraška")] <- c("Primorsko-notranjska",
                                                       "Posavska", "Koroska", "Goriska", "Obalno-kraska")
 #========================================================================================================
 #POROKE

@@ -1,5 +1,5 @@
 ---
-title: "Poročilo pri predmetu Analiza podatkov s programom R"
+title: "Poroke in razveze v Sloveniji"
 author: "Eva Ozebek"
 output:
   html_document: default
@@ -21,7 +21,7 @@ source("lib/libraries.r")
 
 # Izbira teme
 
-Za vzorec bomo prikazali nekaj podatkov o slovenskih občinah.
+Za svojo projektno nalogo bom analizirala poroke in razveze v Sloveniji. Zanimalo me bo, kako se je število porok in razvez spreminjalo skozi čas, kakšna bo korelacija le-teh s starostjo ženina in neveste, pa tudi kakšno je število porok in razvez glede na slovenske regije, kar bom prikazala z zemljevidom. 
 
 ***
 

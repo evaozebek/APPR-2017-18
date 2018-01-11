@@ -4,31 +4,34 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2017/18
 
 ## Poroke in razveze v Sloveniji
 
-Analizirala bom poroke in razveze v Sloveniji skozi čas in glede na starost ženina ter neveste. Zanimal me bo tudi zakonski stan ženina in neveste pred poroko torej ali je le-ta vdova/vdovec, samski/a ali pa razvezan/a. Analizirala bom tudi poroke in razveze v slovenskih regijah. Vključila bom tudi podatke o registriranih partnerskih skupnosti med moškima in med ženskama. Zanimala me bo tudi korelacija med številom porok in versko sestavo prebivalstva Slovenije.
+Analizirala bom poroke in razveze v Sloveniji skozi čas in glede na starost ženina ter neveste. Zanimal me bo tudi zakonski stan ženina in neveste pred poroko torej ali je le-ta vdova/vdovec, samski/a ali pa razvezan/a. Analizirala bom tudi poroke in razveze v slovenskih regijah. 
 
 Podatke bom pridobila na podatkovnem portalu Statističnega urada Republike Slovenije (http://pxweb.stat.si/pxweb/Dialog/statfile2.asp; demografsko in socialno področje) 
 Podatki so na voljo v obliki tabel kot PC-Axis, Excel, txt., .csv, .htm, .xml ipd.
 
+####Zasnova podatkovnega modela
 
-##### 1. tabela: sklenitve zakonskih zvez po starostnih skupinah ženina in neveste
-- spol, starost, leto, sklenitve zakonskih zvez
-
-##### 2. tabela: sklenitve zakonskih zvez po zakonskem stanu ženina in neveste
+##### 1. tabela: sklenitve zakonskih zvez po zakonskem stanu ženina in neveste
 - spol, leto, starostne skupine, zakonski stan ženina, zakonski stan neveste
 
-##### 3. tabela: Razveze zakonskih zvez po starostnih skupinah moža in žene
-- razveze, mož/žena, starostne skupine, leto
+##### 2. tabela: sklenitve zakonskih zvez po starostnih skupinah ženina in neveste
+- spol, starost, leto, sklenitve zakonskih zvez
 
-##### 4. tabela: razveze zakonskih zvez po starostnih skupinah moža in žene ter trajanju zakonske zveze
+##### 3. tabela: razveze zakonskih zvez po starostnih skupinah moža in žene ter trajanju zakonske zveze
 - leto, spol, starostne skupine, trajanje zakonske zveze
 
-##### 5. tabela: poroke in razveze v slovenskih regijah 
-- leto, sklenitve zakonskih zvez, razveze, regije
+##### 4. tabela: Razveze zakonskih zvez po starostnih skupinah moža in žene
+- razveze, mož/žena, starostne skupine, leto
 
-##### 6. tabela: primerjava med številom porok in versko sestavo slovenije
-- leto, poroke, delež vernega prebivalstva
+##### 5. tabela: poroke po slovenskih regijah 
+- leto, sklenitve zakonskih zvez, regije
 
-Predvidevam, da se bo skozi čas število porok zmanjševalo, število razvez pa povečevalo. Sumim da bo število porok v veliki meri povezano z versko sestavo prebivalstva.
+##### 6. tabela: razveze po slovenskih regijah 
+- leto, razveze, regije
+
+
+
+Predvidevam, da se bo skozi čas število porok zmanjševalo, število razvez pa povečevalo. 
 
 
 ## Program
