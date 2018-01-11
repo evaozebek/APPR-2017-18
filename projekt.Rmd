@@ -33,24 +33,41 @@ source("uvoz/uvoz.r")
 
 V tej fazi obdelave podatkov sem uvozila tabele v CSV obliki s statističnega urada. Podatke imam v 6 razpredelnicah v *tidy data* obliki.
 
-1. `druzine` - podatki o družinah za vsako občino
-  - `obcina` - spremenljivka: ime občine (neurejen faktor),
-  - `velikost.druzine` - spremenljivka: število otrok v družini (število: 1, 2, 3 ali 4, kjer zadnja vrednost pomeni 4 ali več),
-  - `stevilo.druzin` - meritev: število družin z ustreznim številom otrok v ustrezni občini (število).
+1. `osnovni.podatki.poroke` - podatki o porokah
+  - `leto` - spremenljivka: leto v katerem so bile opravljene meritve,
+  - `poroke glede na zakonski stan` - spremenljivka: zakonski stan ženina in neveste pred poroko (vdovec, razvezan, samski),
+  - `vrednost` - meritev: število porok.
 
-2. `obcine` - podatki o občinah
-  - `obcina` - spremenljivka: ime občine (neurejen faktor),
-  - `povrsina` - meritev: površina občine v km$^2$ (število),
-  - `prebivalci` - meritev: prebivalstvo občine (število),
-  - `gostota` - meritev: število prebivalcev na km$^2$ (število),
-  - `naselja` - meritev: število naselij v občini (število),
-  - `ustanovitev` - meritev: leto ustanovitve občine (število),
-  - `pokrajina` - meritev: pokrajina, ki ji občina pripada (neurejen faktor),
-  - `regija` - meritev: regija, ki ji občina pripada (neurejen faktor),
-  - `odcepitev` - meritev: podatki o občinah, od katerih se je občina odcepila (besedilo).
+2. `poroke.starost` - podatki o starosi ženina in neveste v času poroke
+  - `leto` - spremenljivka: leto v katerem so bile opravljene meritve,
+  - `ženin` - spremenljivka: starostna skupina ženina ob poroki,
+  - `nevesta` - spremenljivka: starostna skupina neveste ob poroki,
+  - `število` - meritev: število oseb.
 
-**Opomba**: da bi razpredelnica `obcine` res bila v obliki *tidy data*, bi morali odstraniti stolpec `gostota` (saj je izpeljan iz stolpcev `povrsina` in `prebivalci`), podatke o pokrajinah pa bi morali premakniti v drugo razpredelnico, saj nekatere občine pripadajo dvema pokrajinama. Podobno bi morali narediti tudi s stolpcem `odcepitev`.
+3. `osnovni.podatki.razveze` - podatki o razvezah
+  - `leto` - spremenljivka: leto v katerem so bile opravljene meritve,
+  - `razveze` - spremenljivka: razveze glede na trajanje zakona,
+  - `vrednost` - meritev: število razvez.
 
+4. `razveze.starost` - podatki o starosi ženina in neveste ob razvezi
+  - `leto` - spremenljivka: leto v katerem so bile opravljene meritve,
+  - `ženin` - spremenljivka: starostna skupina ženina ob razvezi,
+  - `nevesta` - spremenljivka: starostna skupina neveste ob razvezi,
+  - `število` - meritev: število oseb.
+  
+5. `poroke.regije` - podatki o porokah v slovenskih regijah
+  - `leto` - spremenljivka: leto v katerem so bile opravljene meritve,
+  - `regije` - spremenljivka: poroke glede na slovenske regije,
+  - `število` - meritev: število porok.
+  
+6. `razveze.regije` - podatki o razvezah v slovenskih regijah
+  - `leto` - spremenljivka: leto v katerem so bile opravljene meritve,
+  - `regije` - spremenljivka: razveze glede na slovenske regije,
+  - `število` - meritev: število razvez.  
+  
+  
+  
+  
 Spodnji graf prikazuje porazdelitev števila naselij v občinah.
 
 ```{r histogram, echo=FALSE, message=FALSE, fig.align='center', fig.cap='Histogram števila naselij v občinah'}
