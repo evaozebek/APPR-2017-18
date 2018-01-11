@@ -41,11 +41,15 @@ library(digest)
 gpclibPermit()
 
 zemljevid <- uvozi.zemljevid("http://biogeo.ucdavis.edu/data/gadm2.8/shp/SVN_adm_shp.zip",
-                             "SVN_adm1", encoding = "UTF-8") %>% pretvori.zemljevid()
+                             "SVN_adm1", encoding = "") %>% pretvori.zemljevid()
 
 
 levels(zemljevid$NAME_1)[levels(zemljevid$NAME_1) %in%
-                           c("Spodnjeposavska")] <- c("Posavska")
+                           c("Notranjsko-kraška",
+                             "Spodnjeposavska", "Koroška", "Goriška", "Obalno-kraška ")] <- c("Primorsko-notranjska",
+                                                      "Posavska", "Koroska", "Goriska", "Obalno-kraska")
+#========================================================================================================
+#POROKE
 poroke <- poroke.regije[, names(poroke.regije), drop = F] 
 
 povprecje <- poroke %>% group_by(regija) %>% summarise(poroke = mean(stevilo))
@@ -53,5 +57,17 @@ povprecje <- poroke %>% group_by(regija) %>% summarise(poroke = mean(stevilo))
 zemljevid.poroke <- ggplot() +
   geom_polygon(data = povprecje %>% right_join(zemljevid, by = c("regija" = "NAME_1")),
                aes(x = long, y = lat, group = group, fill = poroke), color = "black")+
-  xlab("") + ylab("") + ggtitle("Stevilo porok na slovenske regije")
+  xlab("") + ylab("") + ggtitle("Število porok po slovenskih regijah")
+#========================================================================================================
+#RAZVEZE
+razveze <- razveze.regije[, names(razveze.regije), drop = F] 
+
+povprecje <- razveze %>% group_by(regija) %>% summarise(razveze = mean(stevilo))
+
+zemljevid.razveze <- ggplot() +
+  geom_polygon(data = povprecje %>% right_join(zemljevid, by = c("regija" = "NAME_1")),
+               aes(x = long, y = lat, group = group, fill = razveze), color = "black")+
+  xlab("") + ylab("") + ggtitle("Število razvez po slovenskih regijah")
+
+
 
