@@ -30,7 +30,6 @@ Podatki so na voljo v obliki tabel kot PC-Axis, Excel, txt., .csv, .htm, .xml ip
 - leto, razveze, regije
 
 
-
 Predvidevam, da se bo skozi čas število porok zmanjševalo, število razvez pa povečevalo. 
 
 
