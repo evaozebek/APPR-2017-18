@@ -10,7 +10,6 @@ st.porok <- ggplot(osnovni.podatki.poroke %>% filter(spremenljivka == "Sklenitve
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 
 
-
 st.razvez <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze - SKUPAJ"), 
                     aes(x = leto, y = vrednost)) + geom_line() + 
   xlab("Leto") + ylab("Stevilo razvez") +
@@ -56,8 +55,15 @@ povprecje <- poroke %>% group_by(regija) %>% summarise(poroke = mean(stevilo))
 
 zemljevid.poroke <- ggplot() +
   geom_polygon(data = povprecje %>% right_join(zemljevid, by = c("regija" = "NAME_1")),
-               aes(x = long, y = lat, group = group, fill = poroke), color = "black")+
+               aes(x = long, y = lat, group = group, fill = poroke))+
   xlab("") + ylab("") + ggtitle("Število porok po slovenskih regijah")
+
+#zemljevid.poroke + scale_fill_gradient(low='green', high='red')
+
+zemljevid.poroke + scale_fill_gradient(low = "#132B43", high = "#56B1F7", space = "Lab",
+na.value = "grey50", guide = "colourbar")
+
+
 #========================================================================================================
 #RAZVEZE
 razveze <- razveze.regije[, names(razveze.regije), drop = F] 
@@ -66,8 +72,9 @@ povprecje <- razveze %>% group_by(regija) %>% summarise(razveze = mean(stevilo))
 
 zemljevid.razveze <- ggplot() +
   geom_polygon(data = povprecje %>% right_join(zemljevid, by = c("regija" = "NAME_1")),
-               aes(x = long, y = lat, group = group, fill = razveze), color = "black")+
+               aes(x = long, y = lat, group = group, fill = razveze))+
   xlab("") + ylab("") + ggtitle("Število razvez po slovenskih regijah")
 
-
+zemljevid.razveze + scale_fill_gradient(low = "#ffb7a8", high = "#bc4229", space = "Lab",
+                                       na.value = "grey50", guide = "colourbar")
 
