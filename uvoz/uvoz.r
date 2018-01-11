@@ -55,4 +55,15 @@ razveze.starost.tidy <- razveze.starost %>%
          zena = zena %>% parse_factor(unique(zena), ordered = TRUE))
 
 #========================================================================================================
+#TABELA 5 - REGIJE POROKE
+poroke.regije <- read_csv2(file = "podatki/Poroke-regije.csv", skip = 4, locale = sl) %>%
+  rename(regija = LETO) %>% melt(id.vars = "regija", value.name = "stevilo", variable.name = "leto") %>%
+  mutate(leto = parse_number(leto))
+
+
+#========================================================================================================
+#TABELA 6 - REGIJE RAZVEZE
+razveze.regije <- read_csv2(file = "podatki/Razveze-regije.csv", skip = 4,locale = sl) %>%
+  rename(regija = LETO) %>% melt(id.vars = "regija", value.name = "stevilo", variable.name = "leto") %>%
+  mutate(leto = parse_number(leto))
 
