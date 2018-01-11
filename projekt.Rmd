@@ -31,8 +31,7 @@ Za svojo projektno nalogo bom analizirala poroke in razveze v Sloveniji. Zanimal
 source("uvoz/uvoz.r")
 ```
 
-Uvozili smo podatke o občinah v obliki CSV s statističnega urada ter v obliki HTML
-z Wikipedije. Podatke imamo v dveh razpredelnicah v obliki *tidy data*.
+V tej fazi obdelave podatkov sem uvozila tabele v CSV obliki s statističnega urada. Podatke imam v 6 razpredelnicah v *tidy data* obliki.
 
 1. `druzine` - podatki o družinah za vsako občino
   - `obcina` - spremenljivka: ime občine (neurejen faktor),

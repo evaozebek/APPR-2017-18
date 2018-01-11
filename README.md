@@ -9,7 +9,7 @@ Analizirala bom poroke in razveze v Sloveniji skozi čas in glede na starost že
 Podatke bom pridobila na podatkovnem portalu Statističnega urada Republike Slovenije (http://pxweb.stat.si/pxweb/Dialog/statfile2.asp; demografsko in socialno področje) 
 Podatki so na voljo v obliki tabel kot PC-Axis, Excel, txt., .csv, .htm, .xml ipd.
 
-####Zasnova podatkovnega modela
+#### Zasnova podatkovnega modela:
 
 ##### 1. tabela: sklenitve zakonskih zvez po zakonskem stanu ženina in neveste
 - spol, leto, starostne skupine, zakonski stan ženina, zakonski stan neveste
