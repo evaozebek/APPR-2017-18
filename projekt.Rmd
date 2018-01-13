@@ -9,7 +9,7 @@ output:
     latex_engine: xelatex
 ---
 
-```{r setup, echo=FALSE, results='hide', message=FALSE}
+```{r setup, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 # Če želimo nastaviti pisave v PDF-ju, odkomentiramo
 # in sledimo navodilom v programu.
 #source("fontconfig.r", encoding = "UTF-8")
@@ -63,9 +63,7 @@ V tej fazi obdelave podatkov sem uvozila tabele v CSV obliki s statističnega ur
   - `leto` - spremenljivka: leto v katerem so bile opravljene meritve,
   - `regije` - spremenljivka: razveze glede na slovenske regije,
   - `število` - meritev: število razvez.  
-  
-  
-  
+
  
 ***
 
@@ -79,29 +77,24 @@ Spodnji graf prikazuje število porok v posameznem letu.
 
 ```{r st.porok, echo=FALSE, message=FALSE, fig.align='center'}
 print(st.porok)
-
 ```
 
 ```{r st.razvez, echo=FALSE, message=FALSE, fig.align='center'}
 print(st.razvez)
-
 ```
 
 ```{r prve.zveze, echo=FALSE, message=FALSE, fig.align='center'}
 print(prve.zveze)
-
 ```
 
 Spodnji zemljevid prikazuje povprečno število porok v posameznih slovenskih regijah.
 
 ```{r zemljevid.poroke, echo=FALSE, message=FALSE, fig.align='center'}
 print(zemljevid.poroke)
-
 ```
 
 ```{r zemljevid.razveze, echo=FALSE, message=FALSE, fig.align='center'}
 print(zemljevid.razveze)
-
 ```
 
 
