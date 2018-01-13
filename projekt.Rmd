@@ -19,7 +19,7 @@ output:
 source("lib/libraries.r")
 ```
 
-# Izbira teme
+# Poroke in razveze v Sloveniji
 
 Za svojo projektno nalogo bom analizirala poroke in razveze v Sloveniji. Zanimalo me bo, kako se je število porok in razvez spreminjalo skozi čas, kakšna bo korelacija le-teh s starostjo ženina in neveste, pa tudi kakšno je število porok in razvez glede na slovenske regije, kar bom prikazala z zemljevidom. 
 
@@ -67,14 +67,7 @@ V tej fazi obdelave podatkov sem uvozila tabele v CSV obliki s statističnega ur
   
   
   
-  
-#Spodnji graf prikazuje porazdelitev števila naselij v občinah.
-
-```{r histogram, echo=FALSE, message=FALSE, fig.align='center', fig.cap='Histogram števila naselij v občinah'}
-ggplot(obcine, aes(x = naselja)) + geom_histogram() +
-  ggtitle("Pogostost števila naselij") + xlab("Število naselij") + ylab("Število občin")
-```
-
+ 
 ***
 
 # Analiza in vizualizacija podatkov
@@ -83,37 +76,19 @@ ggplot(obcine, aes(x = naselja)) + geom_histogram() +
 source("vizualizacija/vizualizacija.r")
 ```
 
-Spodnji zemljevid prikazuje povprečno velikost družine za vsako občino.
+Spodnji graf prikazuje število porok v posameznem letu.
 
-```{r zemljevid, echo=FALSE, fig.align='center', fig.cap='Zemljevid povprečnega števila otrok v družini'}
-ggplot() + geom_polygon(data = left_join(zemljevid, povprecja, by = c("OB_UIME" = "obcina")),
-                        aes(x = long, y = lat, group = group, fill = povprecje)) +
-  ggtitle("Povprečno število otrok v družini") + xlab("") + ylab("") +
-  guides(fill = guide_colorbar(title = "Povprečje"))
-```
+print(st.porok)
 
+print(st.razvez)
+
+print(prve.zveze)
+
+Spodnji zemljevid prikazuje povprečno število porok v posameznih slovenskih regijah.
+
+print(zemljevid.poroke)
+
+print(zemljevid.razveze)
 ***
 
 # Napredna analiza podatkov
-
-```{r analiza, eval=FALSE, message=FALSE, include=FALSE}
-source("analiza/analiza.r")
-```
-
-Spodnji graf prikazuje povezavo med številom naselij in površino občine.
-
-```{r graf, eval=FALSE, fig.align='center', fig.cap='Povezava, include=FALSE}
-ggplot(inner_join(obcine, data.frame(obcina = names(skupine),
-                                     skupina = factor(skupine)), by = "obcina")
-, aes(x = povrsina, y = naselja, color = skupina, size = prebivalci/1000)) + geom_point() +
-  ggtitle("Število naselij glede na površino občine") +
-  xlab(expression("Površina (km"^2 * ")")) + ylab("Št. naselij") +
-  guides(color = guide_legend(title = "Skupina"),
-         size = guide_legend(title = "Prebivalci (* 1000)"))
-```
-
-***
-
-```{r shiny, eval=FALSE, include=FALSE}
-shinyAppDir("shiny", options=list(width="100%", height=600))
-```
