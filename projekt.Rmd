@@ -18,7 +18,10 @@ output:
 source("lib/libraries.r")
 ```
 
-# Poroke in razveze v Sloveniji
+# Izbira teme
+
+![](https://static.pulse.ng/img/incoming/origs5207614/4130483171-w980-h640/marriage-and-divorce.jpg)
+
 
 Za svojo projektno nalogo bom analizirala poroke in razveze v Sloveniji. Zanimalo me bo, kako se je število porok in razvez spreminjalo skozi čas, kakšna bo korelacija le-teh s starostjo ženina in neveste, pa tudi kakšno je število porok in razvez glede na slovenske regije, kar bom prikazala z zemljevidom. 
 
