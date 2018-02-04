@@ -19,9 +19,8 @@ source("lib/libraries.r")
 ```
 
 # Izbira teme
-
-![](https://static.pulse.ng/img/incoming/origs5207614/4130483171-w980-h640/marriage-and-divorce.jpg)
-
+![](https://peopledotcom.files.wordpress.com/2016/08/bad-wedding-1024.jpg?w=1024)
+Vir: people.com
 
 Za svojo projektno nalogo bom analizirala poroke in razveze v Sloveniji. Zanimalo me bo, kako se je število porok in razvez spreminjalo skozi čas, kakšna bo korelacija le-teh s starostjo ženina in neveste, pa tudi kakšno je število porok in razvez glede na slovenske regije, kar bom prikazala z zemljevidom. 
 
@@ -90,7 +89,7 @@ print(st.razvez)
 print(prve.zveze)
 ```
 
-Spodnji zemljevid prikazuje povprečno število porok v posameznih slovenskih regijah.
+Spodnja zemljevida prikazujeta povprečno število porok in razvez v posameznih slovenskih regijah. Kot vidimo, je število porok in razvez največje v osrednje slovenski regiji. 
 
 ```{r zemljevid.poroke, echo=FALSE, message=FALSE, fig.align='center'}
 print(zemljevid.poroke)

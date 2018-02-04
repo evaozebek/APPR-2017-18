@@ -8,12 +8,29 @@ st.porok <- ggplot(osnovni.podatki.poroke %>% filter(spremenljivka == "Sklenitve
                    aes(x = leto, y = vrednost)) + geom_line() + 
   xlab("Leto") + ylab("Stevilo porok") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
-
-
+ 
+#poskus - ZDRUŽITEV
+#========================================================================================================
+st.porok1 <- ggplot() + geom_line(data = osnovni.podatki.poroke %>% filter(spremenljivka == "Sklenitve zakonskih zvez - Skupaj"),
+                                                            aes(x = leto, y= vrednost), color="red") + 
+  geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze - SKUPAJ"), 
+            aes(x = leto, y = vrednost), color="blue") +
+  xlab("Leto") + ylab("Število") + 
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+#manjka še legenda
+#========================================================================================================
+#######
 st.razvez <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze - SKUPAJ"), 
                     aes(x = leto, y = vrednost)) + geom_line() + 
   xlab("Leto") + ylab("Stevilo razvez") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
+
+
+skupaj <- ggplot() + geom_line(aes(x = leto, y = vrednost)) + geom_line(aes(x = leto, y = vrednost))
+
+
+
 
 prve.zveze <-ggplot(osnovni.podatki.poroke %>% filter(spremenljivka == "Prve sklenitve zakonskih zvez"), 
                                  aes(x = leto, y = vrednost)) + geom_line() + 
@@ -29,6 +46,7 @@ razveze.brez.otrok <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka ==
                            aes(x = leto, y = vrednost)) + geom_line() + 
   xlab("Leto") + ylab("Razveze zakonskih zvez brez otrok") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
 
 
 #še primerjava med zakonskim stanom ženina in neveste pred poroko(vdova,samski...)
@@ -74,6 +92,7 @@ zemljevid.razveze <- ggplot() +
   geom_polygon(data = povprecje %>% right_join(zemljevid, by = c("regija" = "NAME_1")),
                aes(x = long, y = lat, group = group, fill = razveze))+
   xlab("") + ylab("") + ggtitle("Število razvez po slovenskih regijah")
+
 
 zemljevid.razveze + scale_fill_gradient(low = "#ffb7a8", high = "#bc4229", space = "Lab",
                                        na.value = "grey50", guide = "colourbar")
