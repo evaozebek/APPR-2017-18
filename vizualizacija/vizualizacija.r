@@ -15,7 +15,7 @@ st.porok1 <- ggplot() + geom_line(data = osnovni.podatki.poroke %>% filter(sprem
                                                             aes(x = leto, y= vrednost), color="red") + 
   geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze - SKUPAJ"), 
             aes(x = leto, y = vrednost), color="blue") +
-  xlab("Leto") + ylab("Število") + 
+  xlab("Leto") + ylab("Število") +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 #manjka še legenda
 #========================================================================================================

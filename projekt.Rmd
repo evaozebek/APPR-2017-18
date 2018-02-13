@@ -19,7 +19,7 @@ source("lib/libraries.r")
 ```
 
 # Izbira teme
-![](https://peopledotcom.files.wordpress.com/2016/08/bad-wedding-1024.jpg?w=1024)
+SLIKA
 Vir: people.com
 
 Za svojo projektno nalogo bom analizirala poroke in razveze v Sloveniji. Zanimalo me bo, kako se je število porok in razvez spreminjalo skozi čas, kakšna bo korelacija le-teh s starostjo ženina in neveste, pa tudi kakšno je število porok in razvez glede na slovenske regije, kar bom prikazala z zemljevidom. 
@@ -98,6 +98,17 @@ print(zemljevid.poroke)
 ```{r zemljevid.razveze, echo=FALSE, message=FALSE, fig.align='center'}
 print(zemljevid.razveze)
 ```
+
+Graf: poroke in razveze (skupaj na istem grafu skozi leta)
+Na grafu sta prikazana število porok in število razvez skozi leta. Kot lahko vidimo se je število porok od leta 1960 pa do danes očitno zmanjšalo, število razvez pa povečalo, kar sem tudi pričakovala. Menim, da je to v veliki meri povezano z versko sestavo prebivalcev Slovenije. Rezultati so tako potrdili mojo hipotezo.
+
+Graf: starost ženina in neveste pri poroki
+Kot lahko vidimo, se je starost pri kateri se ljudje poročajo zelo zvišala. V letu 1960 je bila povprečna starost okoli """20"" let, danes pa je le-ta okoli ""30"" let. To je seveda zelo pričakovan rezultat, saj je včasih pač bilo normalno, da si se poročil pri 20 letih, dan danes pa ljudje najprej zaključijo šolanje, si poiščejo službo, in šele kasneje ustvarijo družino.
+
+
+ZEMLJEVIDA - RAZVEZE IN POROKE PO REGIJAH 
+
+kot lahko vidimo, je v osrednjeslovenski regiji največ porok in razvez. Predvidevam, da je to zaradi vnešenih podatkov. Izračunala sem namreč povprečje porok skozi leta glede na slovenske regije, a sklepam, da tukaj velik faktor igra velikost regije same, kar pa ni upoštevano v podatkih katere sem analizirala. Tako da je ta zemljevid mogoče podatkov ne predstavi najbolje. 
 
 
 ***
