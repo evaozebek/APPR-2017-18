@@ -83,9 +83,17 @@ Na grafu sta prikazana število porok in število razvez skozi leta. Kot lahko v
 print(st.porok1)
 ```
 
-Spodnji graf prikazuje število razvez z otroci in brez. Rdeča - z otroki, modra - brez otrok *dodaj legendo!!!*
+Spodnji graf prikazuje število razvez z otroci in brez. Rdeča - z otroki, oranžna - brez otrok *dodaj legendo!!!*
+Kot lahko opazimo, je število razvez z otroci kar očitno večje kot število razvez brez njih, a se je ta razlika skozi čas zmanjševala. Sedaj je število obeh približno enako, kar je zelo zanimiva ugotovitev, a to lahko povežemo z veliko manjšo rodnostjo otrok danes v primerjavi z naprimer letom 1960. 
+
 ```{r otroci, echo=FALSE, message=FALSE, fig.align='center'}
 print(otroci)
+```
+
+Graf prikazuje trajanje zakonskih zvez pred ločitvijo. Trajanje zakonske zveze pod 1 letom prikazuje modra, trajanje zakonske zveze 1-4 leta prikazuje zelena, trajanje zakonske zveze 5-9 let rdeča, trajanje zakonske zveze 10-14 let oranžna in rajanje zakonske zveze 15 let ali več rumena.
+
+```{r trajanje200, echo=FALSE, message=FALSE, fig.align='center'}
+print(trajanje200)
 ```
 
 Spodnja zemljevida prikazujeta povprečno število porok in razvez v posameznih slovenskih regijah. Kot vidimo, je število porok in razvez največje v osrednjeslovenski regiji. Predvidevam, da je to zaradi vnešenih podatkov, ki pa ne upoštevajo velikosti regije same. Izračunano je povprečje porok in razvez skozi čas za posamezno regijo, a primerjava med regijami samimi je nesmiselna, saj je naprimer osrednjeslovenska regija z 2335 kvadratnimi kilometri veliko večja od koroške s 1041 kvadratnimi kilometri.
@@ -99,16 +107,14 @@ print(zemljevid.razveze)
 ```
 
 
-
-Graf: starost ženina in neveste pri poroki
-Kot lahko vidimo, se je starost pri kateri se ljudje poročajo zelo zvišala. V letu 1960 je bila povprečna starost okoli """20"" let, danes pa je le-ta okoli ""30"" let. To je seveda zelo pričakovan rezultat, saj je včasih pač bilo normalno, da si se poročil pri 20 letih, dan danes pa ljudje najprej zaključijo šolanje, si poiščejo službo, in šele kasneje ustvarijo družino.
-
-
-
 ***
 
 # Napredna analiza podatkov
 
-Število sklenitev zakonske zveze se je v Sloveniji v zadnjih 60 letih močno zmanjšalo; v letu 1954 se je poročilo 14.126 parov, v letu 2014 pa 6.571 parov. Število sklenitev zakonske zveze na 1.000 prebivalcev se je od leta 1954 zmanjšalo za trikrat, v letu 2014 so bile sklenjene 3,2 zakonske zveze na 1.000 prebivalcev (grafikon 5). Najmanj zakonskih zvez na 1.000 prebivalcev v 2014 je bilo sklenjenih v pomurski statistični regiji (2,9 poroke/1.000 prebivalcev), največ pa v spodnjeposavski statistični regiji (3,6 poroke/1.000 prebivalcev).
+Število sklenitev zakonske zveze se je v Sloveniji v zadnjih 60 letih močno zmanjšalo; v letu 1954 se je poročilo 14.126 parov, v letu 2014 pa 6.571 parov. Število sklenitev zakonske zveze na 1.000 prebivalcev se je od leta 1954 zmanjšalo za trikrat, v letu 2014 so bile sklenjene 3,2 zakonske zveze na 1.000 prebivalcev. 
 
-Število razvez zakonskih zvez je v obdobju po drugi svetovni vojni iz leta v leto raslo. Od približno 700 razvez v prvi polovici petdesetih let je do leta 1985 naraslo na 2.500. Po tem letu je sledilo desetletno obdobje zniževanja števila razvez zakonskih zvez. Minimum je bil dosežen leta 1995, ko je bilo razvezanih 1.585 zakonskih zvez ali 0,8 na 1.000 prebivalcev. Od tega leta dalje število razvezanih zakonskih zvez spet stalno raste.
+Predvidevam, da se bo število sklenitev zakonskih zvez v prihodnosti še malo zmanjšalo, a nato postalo konstantno.
+
+Število razvez zakonskih zvez je v obdobju po drugi svetovni vojni iz leta v leto raslo. Od približno 700 razvez v prvi polovici petdesetih let je do leta 1985 naraslo na 2.500. Po tem letu je sledilo desetletno obdobje zniževanja števila razvez zakonskih zvez. Minimum je bil dosežen leta 1995, ko je bilo razvezanih 1.585 zakonskih zvez. Od tega leta dalje število razvezanih zakonskih zvez spet stalno raste.
+
+Predvidevam, da se bo število razvez v prihodnje povečalo.
