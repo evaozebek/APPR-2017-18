@@ -19,10 +19,10 @@ source("lib/libraries.r")
 ```
 
 # Izbira teme
-SLIKA
+![](https://www.beckercounseling.com/wp-content/uploads/2017/07/divorce-2.jpg)
 Vir: people.com
 
-Za svojo projektno nalogo bom analizirala poroke in razveze v Sloveniji. Zanimalo me bo, kako se je število porok in razvez spreminjalo skozi čas, kakšna bo korelacija le-teh s starostjo ženina in neveste, pa tudi kakšno je število porok in razvez glede na slovenske regije, kar bom prikazala z zemljevidom. 
+Za svojo projektno nalogo bom analizirala poroke in razveze v Sloveniji. Zanimalo me bo, kako se je število porok in razvez spreminjalo skozi čas, kakšna bo korelacija le-teh s starostjo ženina in neveste, pa tudi kakšno je število porok in razvez glede na slovenske regije, kar bom prikazala z zemljevidom. Cilj projektne naloge je ugotoviti pravilnost postavljenih hipotez. Predvidevam namreč, da se število porok skozi čas zmanjšuje, razvez pa povečuje, kar je v veliki meri povezano z versko sestavo Slovenije
 
 ***
 
@@ -75,21 +75,20 @@ V tej fazi obdelave podatkov sem uvozila tabele v CSV obliki s statističnega ur
 source("vizualizacija/vizualizacija.r")
 ```
 
-Spodnji graf prikazuje število porok v posameznem letu.
+Spodnji graf prikazuje število porok in razvez v posameznem letu. *dodaj legendo!!!*
 
-```{r st.porok, echo=FALSE, message=FALSE, fig.align='center'}
-print(st.porok)
+Na grafu sta prikazana število porok in število razvez skozi leta. Kot lahko vidimo se je število porok od leta 1955 pa do danes očitno zmanjšalo (od okoli 14000/leto, na okoli 6000/leto), število razvez pa povečalo, kar sem tudi pričakovala. Menim, da je to v veliki meri povezano z versko sestavo prebivalcev Slovenije. Rezultati so tako potrdili mojo hipotezo. 
+
+```{r st.porok1, echo=FALSE, message=FALSE, fig.align='center'}
+print(st.porok1)
 ```
 
-```{r st.razvez, echo=FALSE, message=FALSE, fig.align='center'}
-print(st.razvez)
+Spodnji graf prikazuje število razvez z otroci in brez. Rdeča - z otroki, modra - brez otrok *dodaj legendo!!!*
+```{r otroci, echo=FALSE, message=FALSE, fig.align='center'}
+print(otroci)
 ```
 
-```{r prve.zveze, echo=FALSE, message=FALSE, fig.align='center'}
-print(prve.zveze)
-```
-
-Spodnja zemljevida prikazujeta povprečno število porok in razvez v posameznih slovenskih regijah. Kot vidimo, je število porok in razvez največje v osrednje slovenski regiji. 
+Spodnja zemljevida prikazujeta povprečno število porok in razvez v posameznih slovenskih regijah. Kot vidimo, je število porok in razvez največje v osrednjeslovenski regiji. Predvidevam, da je to zaradi vnešenih podatkov, ki pa ne upoštevajo velikosti regije same. Izračunano je povprečje porok in razvez skozi čas za posamezno regijo, a primerjava med regijami samimi je nesmiselna, saj je naprimer osrednjeslovenska regija z 2335 kvadratnimi kilometri veliko večja od koroške s 1041 kvadratnimi kilometri.
 
 ```{r zemljevid.poroke, echo=FALSE, message=FALSE, fig.align='center'}
 print(zemljevid.poroke)
@@ -99,18 +98,17 @@ print(zemljevid.poroke)
 print(zemljevid.razveze)
 ```
 
-Graf: poroke in razveze (skupaj na istem grafu skozi leta)
-Na grafu sta prikazana število porok in število razvez skozi leta. Kot lahko vidimo se je število porok od leta 1960 pa do danes očitno zmanjšalo, število razvez pa povečalo, kar sem tudi pričakovala. Menim, da je to v veliki meri povezano z versko sestavo prebivalcev Slovenije. Rezultati so tako potrdili mojo hipotezo.
+
 
 Graf: starost ženina in neveste pri poroki
 Kot lahko vidimo, se je starost pri kateri se ljudje poročajo zelo zvišala. V letu 1960 je bila povprečna starost okoli """20"" let, danes pa je le-ta okoli ""30"" let. To je seveda zelo pričakovan rezultat, saj je včasih pač bilo normalno, da si se poročil pri 20 letih, dan danes pa ljudje najprej zaključijo šolanje, si poiščejo službo, in šele kasneje ustvarijo družino.
 
 
-ZEMLJEVIDA - RAZVEZE IN POROKE PO REGIJAH 
-
-kot lahko vidimo, je v osrednjeslovenski regiji največ porok in razvez. Predvidevam, da je to zaradi vnešenih podatkov. Izračunala sem namreč povprečje porok skozi leta glede na slovenske regije, a sklepam, da tukaj velik faktor igra velikost regije same, kar pa ni upoštevano v podatkih katere sem analizirala. Tako da je ta zemljevid mogoče podatkov ne predstavi najbolje. 
-
 
 ***
 
 # Napredna analiza podatkov
+
+Število sklenitev zakonske zveze se je v Sloveniji v zadnjih 60 letih močno zmanjšalo; v letu 1954 se je poročilo 14.126 parov, v letu 2014 pa 6.571 parov. Število sklenitev zakonske zveze na 1.000 prebivalcev se je od leta 1954 zmanjšalo za trikrat, v letu 2014 so bile sklenjene 3,2 zakonske zveze na 1.000 prebivalcev (grafikon 5). Najmanj zakonskih zvez na 1.000 prebivalcev v 2014 je bilo sklenjenih v pomurski statistični regiji (2,9 poroke/1.000 prebivalcev), največ pa v spodnjeposavski statistični regiji (3,6 poroke/1.000 prebivalcev).
+
+Število razvez zakonskih zvez je v obdobju po drugi svetovni vojni iz leta v leto raslo. Od približno 700 razvez v prvi polovici petdesetih let je do leta 1985 naraslo na 2.500. Po tem letu je sledilo desetletno obdobje zniževanja števila razvez zakonskih zvez. Minimum je bil dosežen leta 1995, ko je bilo razvezanih 1.585 zakonskih zvez ali 0,8 na 1.000 prebivalcev. Od tega leta dalje število razvezanih zakonskih zvez spet stalno raste.
