@@ -75,25 +75,24 @@ V tej fazi obdelave podatkov sem uvozila tabele v CSV obliki s statističnega ur
 source("vizualizacija/vizualizacija.r")
 ```
 
-Spodnji graf prikazuje število porok in razvez v posameznem letu. *dodaj legendo!!!*
-
+Spodnji graf prikazuje število porok in razvez v posameznem letu.
 Na grafu sta prikazana število porok in število razvez skozi leta. Kot lahko vidimo se je število porok od leta 1955 pa do danes očitno zmanjšalo (od okoli 14000/leto, na okoli 6000/leto), število razvez pa povečalo, kar sem tudi pričakovala. Menim, da je to v veliki meri povezano z versko sestavo prebivalcev Slovenije. Rezultati so tako potrdili mojo hipotezo. 
 
 ```{r st.porok1, echo=FALSE, message=FALSE, fig.align='center'}
 print(st.porok1)
 ```
 
-Spodnji graf prikazuje število razvez z otroci in brez. Rdeča - z otroki, oranžna - brez otrok *dodaj legendo!!!*
+Spodnji graf prikazuje število razvez z otroci in brez.
 Kot lahko opazimo, je število razvez z otroci kar očitno večje kot število razvez brez njih, a se je ta razlika skozi čas zmanjševala. Sedaj je število obeh približno enako, kar je zelo zanimiva ugotovitev, a to lahko povežemo z veliko manjšo rodnostjo otrok danes v primerjavi z naprimer letom 1960. 
 
-```{r otroci, echo=FALSE, message=FALSE, fig.align='center'}
-print(otroci)
+```{r otroki, echo=FALSE, message=FALSE, fig.align='center'}
+print(otroki)
 ```
 
-Graf prikazuje trajanje zakonskih zvez pred ločitvijo. Trajanje zakonske zveze pod 1 letom prikazuje modra, trajanje zakonske zveze 1-4 leta prikazuje zelena, trajanje zakonske zveze 5-9 let rdeča, trajanje zakonske zveze 10-14 let oranžna in rajanje zakonske zveze 15 let ali več rumena.
+Graf prikazuje trajanje zakonskih zvez pred ločitvijo.
 
-```{r trajanje200, echo=FALSE, message=FALSE, fig.align='center'}
-print(trajanje200)
+```{r trajanje, echo=FALSE, message=FALSE, fig.align='center'}
+print(trajanje)
 ```
 
 Spodnja zemljevida prikazujeta povprečno število porok in razvez v posameznih slovenskih regijah. Kot vidimo, je število porok in razvez največje v osrednjeslovenski regiji. Predvidevam, da je to zaradi vnešenih podatkov, ki pa ne upoštevajo velikosti regije same. Izračunano je povprečje porok in razvez skozi čas za posamezno regijo, a primerjava med regijami samimi je nesmiselna, saj je naprimer osrednjeslovenska regija z 2335 kvadratnimi kilometri veliko večja od koroške s 1041 kvadratnimi kilometri.

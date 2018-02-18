@@ -4,44 +4,73 @@ library(ggplot2)
 library(dplyr)
 #========================================================================================================
 #GRAFI
-st.porok <- ggplot(osnovni.podatki.poroke %>% filter(spremenljivka == "Sklenitve zakonskih zvez - Skupaj"),
-                   aes(x = leto, y = vrednost)) + geom_line() + 
-  xlab("Leto") + ylab("Stevilo porok") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+#st.porok <- ggplot(osnovni.podatki.poroke %>% filter(spremenljivka == "Sklenitve zakonskih zvez - Skupaj"),
+#                   aes(x = leto, y = vrednost)) + geom_line() + 
+ # xlab("Leto") + ylab("Stevilo porok") +
+#  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 
-st.razvez <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze - SKUPAJ"), 
-                    aes(x = leto, y = vrednost)) + geom_line() + 
-  xlab("Leto") + ylab("Število razvez") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+#st.razvez <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze - SKUPAJ"), 
+ #                   aes(x = leto, y = vrednost)) + geom_line() + 
+#  xlab("Leto") + ylab("Število razvez") +
+ # theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
+
+
+osnovni.podatki <- rbind(osnovni.podatki.poroke, osnovni.podatki.razveze)
+
+st.porok1 <- ggplot(osnovni.podatki %>%
+                      filter(spremenljivka %in% c("Sklenitve zakonskih zvez - Skupaj",
+                                                  "Razveze - SKUPAJ")),
+                    aes(x = leto, y = vrednost, color = spremenljivka)) + geom_line() +
+  xlab("Leto") + ylab("Število") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
+  scale_color_discrete(name = "Zakonske zveze",
+                       breaks = c("Sklenitve zakonskih zvez - Skupaj",
+                                  "Razveze - SKUPAJ"),
+                       labels = c("Poroke", "Razveze"))
+
+
+
 
 #========================================================================================================
 #ZDRUŽITEV
-st.porok1 <- ggplot() + geom_line(data = osnovni.podatki.poroke %>% filter(spremenljivka == "Sklenitve zakonskih zvez - Skupaj"),
-                                                            aes(x = leto, y= vrednost), color="red") + 
-  geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze - SKUPAJ"), 
-            aes(x = leto, y = vrednost), color="blue") +
-  xlab("Leto") + ylab("Število") +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+#st.porok1 <- ggplot() + geom_line(data = osnovni.podatki.poroke %>% filter(spremenljivka == "Sklenitve zakonskih zvez - Skupaj"),
+#                                                            aes(x = leto, y= vrednost), color="red") + 
+ # geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze - SKUPAJ"), 
+#            aes(x = leto, y = vrednost), color="blue") +
+#  xlab("Leto") + ylab("Število") +
+#    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 
 #========================================================================================================
 
-razveze.z.otroki <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze zakonskih zvez z otroki"), 
-                           aes(x = leto, y = vrednost)) + geom_line() + 
-  xlab("Leto") + ylab("Razveze zakonskih zvez z otroki") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
-
-razveze.brez.otrok <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze zakonskih zvez brez otrok"), 
-                           aes(x = leto, y = vrednost)) + geom_line() + 
-  xlab("Leto") + ylab("Razveze zakonskih zvez brez otrok") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+#razveze.z.otroki <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze zakonskih zvez z otroki"), 
+#                           aes(x = leto, y = vrednost)) + geom_line() + 
+#  xlab("Leto") + ylab("Razveze zakonskih zvez z otroki") +
+#  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+#
+#razveze.brez.otrok <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze zakonskih zvez brez otrok"), 
+#                           aes(x = leto, y = vrednost)) + geom_line() + 
+#  xlab("Leto") + ylab("Razveze zakonskih zvez brez otrok") +
+#  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 #========================================================================================================
 #ZDRUŽITEV
-otroci <- ggplot() + geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze zakonskih zvez z otroki"), 
-                               aes(x = leto, y = vrednost), color = "red") + 
-  geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze zakonskih zvez brez otrok"),
-            aes(x = leto, y = vrednost), color = "orange") +
+#otroci <- ggplot() + geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze zakonskih zvez z otroki"), 
+#                               aes(x = leto, y = vrednost), color = "red") + 
+#  geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Razveze zakonskih zvez brez otrok"),
+#            aes(x = leto, y = vrednost), color = "orange") +
+#  xlab("Leto") + ylab("Število") +
+#  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
+otroki <- ggplot(osnovni.podatki %>%
+                      filter(spremenljivka %in% c("Razveze zakonskih zvez z otroki",
+                                                  "Razveze zakonskih zvez brez otrok")),
+                    aes(x = leto, y = vrednost, color = spremenljivka)) + geom_line() +
   xlab("Leto") + ylab("Število") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
+  scale_color_discrete(name = "Legenda",
+                       breaks = c("Razveze zakonskih zvez z otroki",
+                                  "Razveze zakonskih zvez brez otrok"),
+                       labels = c("Razveze z otroki", "Razveze brez otrok"))
 
 #========================================================================================================
 
@@ -51,45 +80,71 @@ prve.zveze <-ggplot(osnovni.podatki.poroke %>% filter(spremenljivka == "Prve skl
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 
 #========================================================================================================
-trajanje200 <- ggplot() + geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 5-9 let"), 
-                                 aes(x = leto, y = vrednost), color = "red") + 
-  geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze pod 1 leto"), 
-            aes(x = leto, y = vrednost), colour = "blue") + 
-  geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 1-4 leta"), 
-            aes(x = leto, y = vrednost), colour = "green") +
-  geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 10-14 let"), 
-            aes(x = leto, y = vrednost), colour = "orange") +
-  geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 15 let ali vec"), 
-            aes(x = leto, y = vrednost), colour = "yellow") +
+# trajanje200 <- ggplot() + geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 5-9 let"), 
+#                                  aes(x = leto, y = vrednost), color = "red") + 
+#   geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze pod 1 leto"), 
+#             aes(x = leto, y = vrednost), colour = "blue") + 
+#   geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 1-4 leta"), 
+#             aes(x = leto, y = vrednost), colour = "green") +
+#   geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 10-14 let"), 
+#             aes(x = leto, y = vrednost), colour = "orange") +
+#   geom_line(data = osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 15 let ali vec"), 
+#             aes(x = leto, y = vrednost), colour = "yellow") +
+#   xlab("Leto") + ylab("Število") +
+#   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
+
+
+
+trajanje <- ggplot(osnovni.podatki %>%
+                   filter(spremenljivka %in% c("Trajanje zakonske zveze pod 1 leto",
+                                               "Trajanje zakonske zveze 1-4 leta",
+                                               "Trajanje zakonske zveze 5-9 let",
+                                               "Trajanje zakonske zveze 10-14 let",
+                                               "Trajanje zakonske zveze 15 let ali vec")),
+                 aes(x = leto, y = vrednost, color = spremenljivka)) + geom_line() +
   xlab("Leto") + ylab("Število") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
+  scale_color_discrete(name = "Trajanje zakonske zveze",
+                       breaks = c("Trajanje zakonske zveze pod 1 leto",
+                                  "Trajanje zakonske zveze 1-4 leta",
+                                  "Trajanje zakonske zveze 5-9 let",
+                                  "Trajanje zakonske zveze 10-14 let",
+                                  "Trajanje zakonske zveze 15 let ali vec"),
+                       labels = c("Pod 1 leto",
+                                  "1-4 leta",
+                                  "5-9 let",
+                                  "10-14 let",
+                                  "15 let ali več"))
 
 
-trajanje5 <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 5-9 let"), 
-                    aes(x = leto, y = vrednost)) + geom_line() + 
-  xlab("Leto") + ylab("Trajanje zakonske zveze 5-9 let") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
-
-trajanje0 <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze pod 1 leto"), 
-                    aes(x = leto, y = vrednost)) + geom_line() + 
-  xlab("Leto") + ylab("Trajanje zakonske zveze pod 1 leto") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 
 
-trajanje1 <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 1-4 leta"), 
-                    aes(x = leto, y = vrednost)) + geom_line() + 
-  xlab("Leto") + ylab("Trajanje zakonske zveze 1-4 leta") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+#trajanje5 <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 5-9 let"), 
+#                    aes(x = leto, y = vrednost)) + geom_line() + 
+#  xlab("Leto") + ylab("Trajanje zakonske zveze 5-9 let") +
+#  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 
-trajanje10 <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 10-14 let"), 
-                    aes(x = leto, y = vrednost)) + geom_line() + 
-  xlab("Leto") + ylab("Trajanje zakonske zveze 10-14 let") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
-
-trajanje15 <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 15 let ali vec"), 
-                    aes(x = leto, y = vrednost)) + geom_line() + 
-  xlab("Leto") + ylab("Trajanje zakonske zveze 15 let ali vec") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+# trajanje0 <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze pod 1 leto"), 
+#                     aes(x = leto, y = vrednost)) + geom_line() + 
+#   xlab("Leto") + ylab("Trajanje zakonske zveze pod 1 leto") +
+#   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+# 
+# 
+# trajanje1 <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 1-4 leta"), 
+#                     aes(x = leto, y = vrednost)) + geom_line() + 
+#   xlab("Leto") + ylab("Trajanje zakonske zveze 1-4 leta") +
+#   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+# 
+# trajanje10 <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 10-14 let"), 
+#                     aes(x = leto, y = vrednost)) + geom_line() + 
+#   xlab("Leto") + ylab("Trajanje zakonske zveze 10-14 let") +
+#   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+# 
+# trajanje15 <- ggplot(osnovni.podatki.razveze %>% filter(spremenljivka == "Trajanje zakonske zveze 15 let ali vec"), 
+#                      aes(x = leto, y = vrednost)) + geom_line() + 
+#    xlab("Leto") + ylab("Trajanje zakonske zveze 15 let ali vec") +
+#    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 
 
 
