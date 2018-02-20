@@ -116,10 +116,12 @@ source("analiza/analiza.r")
 
 Število sklenitev zakonske zveze se je v Sloveniji v zadnjih 60 letih močno zmanjšalo; v letu 1954 se je poročilo 14.126 parov, v letu 2014 pa 6.571 parov. Število sklenitev zakonske zveze na 1.000 prebivalcev se je od leta 1954 zmanjšalo za trikrat, v letu 2014 so bile sklenjene 3,2 zakonske zveze na 1.000 prebivalcev. 
 
-Predvidevam, da se bo število sklenitev zakonskih zvez v prihodnosti še zmanjševalo.
+Predvidevam, da se bo število sklenitev zakonskih zvez v prihodnosti še zmanjševalo. Kot vidimo je od leta 1955 pa vse do 2016 število porok padalo in podoben trend lahko pričakujemo v prihodnosti.
 ```{r graf5, echo=FALSE, message=FALSE, fig.align='center'}
 print(graf5)
 ```
+
+
 
 Število razvez zakonskih zvez je v obdobju po drugi svetovni vojni iz leta v leto raslo. Od približno 700 razvez v prvi polovici petdesetih let je do leta 1985 naraslo na 2.500. Po tem letu je sledilo desetletno obdobje zniževanja števila razvez zakonskih zvez. Minimum je bil dosežen leta 1995, ko je bilo razvezanih 1.585 zakonskih zvez. Od tega leta dalje število razvezanih zakonskih zvez spet stalno raste.
 

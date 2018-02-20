@@ -14,7 +14,7 @@ osnovni.podatki <- rbind(osnovni.podatki.poroke, osnovni.podatki.razveze)
 
 ociscena <- subset(osnovni.podatki, spremenljivka == "Sklenitve zakonskih zvez - Skupaj")
 fit <- lm(data = ociscena, vrednost ~ leto)
-a <- data.frame(leto=seq(1955, 2016, 4))
+a <- data.frame(leto=seq(1955, 2030, 4))
 predict(fit, a)
 napoved <- a %>% mutate(vrednost=predict(fit, .))
 graf5 <- ggplot(ociscena, aes(x=leto, y=vrednost)) +
